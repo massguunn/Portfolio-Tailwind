@@ -30,27 +30,42 @@
                         <ul class="block lg:flex">
                             <li class="group">
                                 <a href="#home"
-                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary">Beranda</a>
+                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Beranda</a>
                             </li>
                             <li class="group">
                                 <a href="#about"
-                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary">About</a>
+                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">About</a>
                             </li>
                             <li class="group">
                                 <a href="#portfolio"
-                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary">Portofolio</a>
+                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Portofolio</a>
                             </li>
                             <li class="group">
                                 <a href="#clients"
-                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary">Client</a>
+                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Client</a>
                             </li>
                             <li class="group">
                                 <a href="#blog"
-                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary">Blog</a>
+                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Blog</a>
                             </li>
                             <li class="group">
                                 <a href="#contact"
-                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary">Contact</a>
+                                    class="text-base flex text-dark py-2 mx-8 group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+                            <li class="flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle" class="relative">
+                                        <div
+                                            class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div
+                                                class="toggle-circle h-4 w-4 rounded-full bg-white transition-transform duration-300">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -61,7 +76,7 @@
     <!-- navbar section end -->
 
     <!-- ini adalah section home-->
-    <section id="home" class="pt-32">
+    <section id="home" class="pt-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">

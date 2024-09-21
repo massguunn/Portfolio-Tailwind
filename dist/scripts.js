@@ -24,3 +24,23 @@ window.onscroll = function () {
     toTop.classList.add("hidden");
   }
 };
+
+//klik diluar hamburger
+window.addEventListener("click", function (e) {
+  if (e.target != hamburger && e.target != navMenu) {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
+
+// dark mode
+const darkToggle = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+
+darkToggle.addEventListener("click", function () {
+  if (darkToggle.checked) {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
+});
