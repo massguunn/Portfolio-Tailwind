@@ -1212,10 +1212,10 @@ video {
 body {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* Memanfaatkan class Tailwind untuk font sans-serif */
-  font-family: "Inter", sans-serif;
+  /* Hanya gunakan satu aturan font */
 }
 
-/* Navbar fixed ketika di-scroll */
+/* Navbar tetap di posisi saat di-scroll */
 
 .navbar-fixed {
   position: fixed;
@@ -1237,11 +1237,11 @@ body {
 }
 
 .navbar-fixed {
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
-  /* Menggunakan shadow yang lebih ringan */
+  /* Gunakan shadow lebih ringan untuk tampilan lebih halus */
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Style untuk garis pada hamburger */
+/* Garis hamburger */
 
 .hamburger-line {
   margin-top: 0.5rem;
@@ -1259,36 +1259,36 @@ body {
 html.dark .hamburger-line {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  /* Warna hamburger berubah di mode dark */
+  /* Ubah warna hamburger di mode dark */
 }
 
 /* Ketika hamburger aktif */
 
-.hamburger-active > span:nth-child(1) {
-  --tw-translate-y: 7px;
+.hamburger-active > .hamburger-line:nth-child(1) {
+  --tw-translate-y: 0px;
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  /* Menambahkan translate untuk posisi lebih baik */
+  /* Posisi translate */
 }
 
-.hamburger-active > span:nth-child(3) {
-  --tw-translate-y: -7px;
+.hamburger-active > .hamburger-line:nth-child(3) {
+  --tw-translate-y: -0px;
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  /* Menambahkan translate untuk posisi */
+  /* Posisi translate */
 }
 
-.hamburger-active > span:nth-child(2) {
+.hamburger-active > .hamburger-line:nth-child(2) {
   --tw-scale-x: 0;
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 0;
-  /* Mengubah scale jadi 0 dan menghilangkan opacity */
+  /* Ubah skala dan opacity */
 }
 
 /* Toggle untuk dark mode */
 
-#dark-toggle:checked + label div.toggle-circle {
+#dark-toggle:checked + label .toggle-circle {
   --tw-translate-x: 0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   transition-property: transform;

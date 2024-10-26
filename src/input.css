@@ -4,37 +4,39 @@
 
 body {
   @apply font-sans; /* Memanfaatkan class Tailwind untuk font sans-serif */
-  font-family: "Inter", sans-serif;
+  /* Hanya gunakan satu aturan font */
 }
 
-/* Navbar fixed ketika di-scroll */
+/* Navbar tetap di posisi saat di-scroll */
 .navbar-fixed {
   @apply fixed z-[9999] bg-white opacity-80 backdrop-blur-sm shadow-sm dark:bg-dark dark:bg-opacity-50;
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2); /* Menggunakan shadow yang lebih ringan */
+  /* Gunakan shadow lebih ringan untuk tampilan lebih halus */
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Style untuk garis pada hamburger */
+/* Garis hamburger */
 .hamburger-line {
   @apply w-[30px] h-[2px] my-2 block bg-dark transition-all duration-300 ease-in-out;
 }
 
 html.dark .hamburger-line {
-  @apply bg-white; /* Warna hamburger berubah di mode dark */
+  @apply bg-white; /* Ubah warna hamburger di mode dark */
 }
+
 /* Ketika hamburger aktif */
-.hamburger-active > span:nth-child(1) {
-  @apply rotate-45 translate-y-[7px]; /* Menambahkan translate untuk posisi lebih baik */
+.hamburger-active > .hamburger-line:nth-child(1) {
+  @apply rotate-45 translate-y-[0px]; /* Posisi translate */
 }
 
-.hamburger-active > span:nth-child(3) {
-  @apply -rotate-45 -translate-y-[7px]; /* Menambahkan translate untuk posisi */
+.hamburger-active > .hamburger-line:nth-child(3) {
+  @apply -rotate-45 -translate-y-[0px]; /* Posisi translate */
 }
 
-.hamburger-active > span:nth-child(2) {
-  @apply scale-0 opacity-0; /* Mengubah scale jadi 0 dan menghilangkan opacity */
+.hamburger-active > .hamburger-line:nth-child(2) {
+  @apply scale-0 opacity-0; /* Ubah skala dan opacity */
 }
 
 /* Toggle untuk dark mode */
-#dark-toggle:checked + label div.toggle-circle {
+#dark-toggle:checked + label .toggle-circle {
   @apply translate-x-3 transition-transform duration-300 ease-in-out;
 }
