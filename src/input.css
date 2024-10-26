@@ -15,11 +15,11 @@ body {
 
 /* Style untuk garis pada hamburger */
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark transition-all duration-300 ease-in-out;
+  @apply w-[30px] h-[2px] my-2 block bg-white transition-all duration-300 ease-in-out;
 }
 
 html.dark .hamburger-line {
-  @apply bg-yellow-300; /* Warna hamburger berubah di mode dark */
+  @apply bg-white-300; /* Warna hamburger berubah di mode dark */
 }
 /* Ketika hamburger aktif */
 .hamburger-active > span:nth-child(1) {
